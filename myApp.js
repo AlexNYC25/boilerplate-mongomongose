@@ -23,10 +23,7 @@ const createAndSavePerson = (done) => {
 
 
 const createManyPeople = (arrayOfPeople, done) => {
-  arrayOfPeople.forEach((person) => {
-    person.save(done);
-  }
-  )
+  Person.create(arrayOfPeople, done);
 };
 
 const findPeopleByName = (personName, done) => {
